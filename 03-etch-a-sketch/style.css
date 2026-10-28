@@ -1,0 +1,13 @@
+.container {
+    width: 960px;
+    height: 960px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid-square {
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    flex: 0 0 calc(100% / 16);
+    aspect-ratio: 1;
+}
