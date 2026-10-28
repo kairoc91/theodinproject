@@ -1,0 +1,8 @@
+# System files
+.DS_Store
+*.swp
+*~
+
+# Documentation files
+03-etch-a-sketch/documentation.html
+
