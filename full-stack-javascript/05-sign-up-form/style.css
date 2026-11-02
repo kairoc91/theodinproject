@@ -1,0 +1,252 @@
+@font-face {
+    font-family: 'Norse';
+    src: url('font/norse.otf') format('opentype');
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1f2937;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- COLUNA ESQUERDA (SIDEBAR) --- */
+.sidebar-section {
+    flex: 0 0 38%;
+}
+
+.left-side {
+    background-image: url("img/bg-left-side.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.black-bar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(0, 0, 0, 0.4);
+    margin-top: 180px;
+    padding: 12px 0;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.odin-logo {
+    height: 100px;
+}
+
+.odin-text {
+    font-family: 'Norse', sans-serif;
+    color: white;
+    font-size: 5.5rem;
+    letter-spacing: 2px;
+}
+
+.photo-credit {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.8rem;
+    margin-bottom: 12px;
+}
+
+.photo-credit a {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* --- COLUNA DIREITA (CONTEÚDO PRINCIPAL) --- */
+.main-section {
+    flex: 1;
+    padding-top: 100px;
+    background-color: #f9fafb;
+}
+
+.right-side {
+    padding-left: 50px;
+    padding-right: 100px;
+}
+
+.p1,
+.p2,
+.p3 {
+    font-weight: 600;
+    font-size: 1.35rem;
+    line-height: 1.4;
+    color: #1f2937;
+}
+
+.p3 {
+    margin-top: 24px;
+}
+
+/* --- CAIXA BRANCA DO FORMULÁRIO --- */
+.form-box {
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    margin: 40px 0;
+    padding: 24px 50px 36px 50px;
+}
+
+fieldset {
+    border: none;
+    display: grid;
+    grid-template-columns: 240px 240px;
+    column-gap: 50px;
+    row-gap: 18px;
+}
+
+legend {
+    grid-column: 1 / -1;
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #4b5563;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.form-group input {
+    height: 32px;
+    padding: 0 10px;
+    border: 1px solid #E5E7EB;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.form-group input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 5px rgba(59, 130, 246, 0.4);
+}
+
+.form-group input.error {
+    border-color: #dc2626;
+}
+
+/* --- AÇÕES INFERIORES (BOTÃO E LOGIN) --- */
+.bottom-action {
+    padding-left: 50px;
+}
+
+.btn-create {
+    background-color: #596D48;
+    color: #ffffff;
+    font-size: 1.05rem;
+    font-weight: 700;
+    padding: 14px 44px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.18);
+    cursor: pointer;
+    margin-bottom: 28px;
+    transition: background-color 0.15s ease;
+}
+
+.btn-create:hover {
+    background-color: #4b5c3d;
+}
+
+.bottom-action p {
+    font-size: 1rem;
+    color: #1f2937;
+}
+
+.bottom-action a {
+    color: #596D48;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.bottom-action a:hover {
+    text-decoration: underline;
+}
+
+
+.form-group input {
+    height: 32px;
+    padding: 0 10px;
+    border: 1px solid #E5E7EB;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.form-group input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 5px rgba(59, 130, 246, 0.4);
+}
+
+.form-group input.error {
+    border-color: #dc2626;
+}
+
+/* --- AÇÕES INFERIORES (BOTÃO E LOGIN) --- */
+.bottom-action {
+    padding-left: 50px;
+}
+
+.btn-create {
+    background-color: #596D48;
+    color: #ffffff;
+    font-size: 1.05rem;
+    font-weight: 700;
+    padding: 14px 44px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.18);
+    cursor: pointer;
+    margin-bottom: 28px;
+    transition: background-color 0.15s ease;
+}
+
+.btn-create:hover {
+    background-color: #4b5c3d;
+}
+
+.bottom-action p {
+    font-size: 1rem;
+    color: #1f2937;
+}
+
+.bottom-action a {
+    color: #596D48;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.bottom-action a:hover {
+    text-decoration: underline;
+}
