@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Material Icons / Symbols -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <span class="material-symbols-outlined brand-icon">dashboard</span>
+                <span class="brand-text">Dashboard</span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#" class="nav-item"><span class="material-symbols-outlined">home</span>Home</a></li>
+                <li><a href="#" class="nav-item"><span class="material-symbols-outlined">badge</span>Profile</a></li>
+                <li><a href="#" class="nav-item"><span class="material-symbols-outlined">chat_bubble</span>Messages</a></li>
+                <li><a href="#" class="nav-item"><span class="material-symbols-outlined">schedule</span>History</a></li>
+                <li><a href="#" class="nav-item"><span class="material-symbols-outlined">task</span>Tasks</a></li>
+                <li><a href="#" class="nav-item"><span class="material-symbols-outlined">groups</span>Communities</a></li>
+            </ul>
+
+            <ul class="nav-links settings-group">
+                <li><a href="#" class="nav-item"><span class="material-symbols-outlined">settings</span>Settings</a></li>
+                <li><a href="#" class="nav-item"><span class="material-symbols-outlined">help</span>Support</a></li>
+                <li><a href="#" class="nav-item"><span class="material-symbols-outlined">verified_user</span>Privacy</a></li>
+            </ul>
+        </aside>
+
+        <!-- HEADER -->
+        <header class="header">
+            <!-- Header Top Row -->
+            <div class="header-top">
+                <div class="search-box">
+                    <span class="material-symbols-outlined search-icon">search</span>
+                    <input type="text" class="search-input">
+                </div>
+
+                <div class="header-user-nav">
+                    <span class="material-symbols-outlined notification-icon">notifications</span>
+                    <img src="https://api.dicebear.com/7.x/bottts/svg?seed=Morgan" alt="User Avatar" class="avatar-small">
+                    <span class="user-name">Morgan Oakley</span>
+                </div>
+            </div>
+
+            <!-- Header Bottom Row -->
+            <div class="header-bottom">
+                <div class="user-greeting">
+                    <img src="https://api.dicebear.com/7.x/bottts/svg?seed=Morgan" alt="User Avatar" class="avatar-large">
+                    <div class="greeting-text">
+                        <span class="greeting-small">Hi there,</span>
+                        <h2 class="greeting-name">Morgan Oakley (@morgan)</h2>
+                    </div>
+                </div>
+
+                <div class="header-actions">
+                    <button class="btn btn-action">New</button>
+                    <button class="btn btn-action">Upload</button>
+                    <button class="btn btn-action">Share</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- MAIN CONTENT AREA -->
+        <main class="main-content">
+            <!-- Projects Section -->
+            <section class="projects-section">
+                <h3 class="section-title">Your Projects</h3>
+
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <div class="project-content">
+                            <h4>Super Cool Project</h4>
+                            <p>Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin nibh erat, id facilisis felis accumsan nec.</p>
+                        </div>
+                        <div class="card-icons">
+                            <span class="material-symbols-outlined">star</span>
+                            <span class="material-symbols-outlined">visibility</span>
+                            <span class="material-symbols-outlined">fork_right</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-content">
+                            <h4>Less Cool Project</h4>
+                            <p>Nullam condimentum ipsum ut lectus vehicula consectetur. Quisque sed dolor tincidunt, consectetur sapien et, facilisis dolor. Duis sem purus, dignissim ut sapien in, varius pellentesque lacus.</p>
+                        </div>
+                        <div class="card-icons">
+                            <span class="material-symbols-outlined">star</span>
+                            <span class="material-symbols-outlined">visibility</span>
+                            <span class="material-symbols-outlined">fork_right</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-content">
+                            <h4>Impossible App</h4>
+                            <p>In hac habitasse platea dictumst. Vivamus dictum rutrum arcu, a placerat velit sagittis id.</p>
+                        </div>
+                        <div class="card-icons">
+                            <span class="material-symbols-outlined">star</span>
+                            <span class="material-symbols-outlined">visibility</span>
+                            <span class="material-symbols-outlined">fork_right</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-content">
+                            <h4>Easy Peasy App</h4>
+                            <p>Etiam cursus eros ac efficitur fringilla. Vestibulum dignissim urna eget accumsan aliquam. Curabitur dignissim nisi in tortor commodo, ac bibendum magna tincidunt.</p>
+                        </div>
+                        <div class="card-icons">
+                            <span class="material-symbols-outlined">star</span>
+                            <span class="material-symbols-outlined">visibility</span>
+                            <span class="material-symbols-outlined">fork_right</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-content">
+                            <h4>Ad Blocker</h4>
+                            <p>Quisque eget rutrum nisl. Nam augue justo, cursus vitae metus vel, pharetra hendrerit felis. Aliquam sed malesuada eros.</p>
+                        </div>
+                        <div class="card-icons">
+                            <span class="material-symbols-outlined">star</span>
+                            <span class="material-symbols-outlined">visibility</span>
+                            <span class="material-symbols-outlined">fork_right</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-content">
+                            <h4>Money Maker</h4>
+                            <p>Praesent convallis, libero quis congue elementum, nunc ante faucibus sapien, ac scelerisque tortor purus sit amet ex. Pellentesque mollis nec sem vel aliquam.</p>
+                        </div>
+                        <div class="card-icons">
+                            <span class="material-symbols-outlined">star</span>
+                            <span class="material-symbols-outlined">visibility</span>
+                            <span class="material-symbols-outlined">fork_right</span>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Aside Info (Announcements & Trending) -->
+            <aside class="sidebar-info">
+                <!-- Announcements -->
+                <div class="announcements-container">
+                    <h3 class="section-title">Announcements</h3>
+                    <div class="card card-announcements">
+                        <div class="announcement-item">
+                            <h5>Site Maintenance</h5>
+                            <p>Vestibulum condimentum tellus lacus, in accumsan elit maximus ac. Donec hendrerit sodales congue...</p>
+                        </div>
+                        <hr>
+                        <div class="announcement-item">
+                            <h5>Community Share Day</h5>
+                            <p>Nam vel lectus tincidunt, rutrum nulla eu, ornare libero. Aliquam dictum accumsan porttitor...</p>
+                        </div>
+                        <hr>
+                        <div class="announcement-item">
+                            <h5>Updated Privacy Policy</h5>
+                            <p>Phasellus efficitur nisi eget elit consectetur, eget condimentum ante auctor. Cras fringilla sagittis sem in mattis...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trending -->
+                <div class="trending-container">
+                    <h3 class="section-title">Trending</h3>
+                    <div class="card card-trending">
+                        <div class="trending-user">
+                            <img src="https://api.dicebear.com/7.x/identicon/svg?seed=tegan" alt="tegan" class="avatar-circle">
+                            <div class="trending-info">
+                                <span class="trending-handle">@tegan</span>
+                                <span class="trending-desc">World Peace Builder</span>
+                            </div>
+                        </div>
+
+                        <div class="trending-user">
+                            <img src="https://api.dicebear.com/7.x/bottts/svg?seed=Morgan" alt="morgan" class="avatar-circle">
+                            <div class="trending-info">
+                                <span class="trending-handle">@morgan</span>
+                                <span class="trending-desc">Super Cool Project</span>
+                            </div>
+                        </div>
+
+                        <div class="trending-user">
+                            <img src="https://api.dicebear.com/7.x/identicon/svg?seed=kendall" alt="kendall" class="avatar-circle">
+                            <div class="trending-info">
+                                <span class="trending-handle">@kendall</span>
+                                <span class="trending-desc">Life Changing App</span>
+                            </div>
+                        </div>
+
+                        <div class="trending-user">
+                            <img src="https://api.dicebear.com/7.x/identicon/svg?seed=alex" alt="alex" class="avatar-circle">
+                            <div class="trending-info">
+                                <span class="trending-handle">@alex</span>
+                                <span class="trending-desc">No Traffic Maker</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </main>
+    </div>
+</body>
+
+</html>
