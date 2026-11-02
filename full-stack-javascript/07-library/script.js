@@ -1,18 +1,16 @@
 const dialog = document.getElementById("book-dialog");
+
 const newBookBtn = document.getElementById("btn-new-book");
-const closeDialogBtn = document.getElementById("btn-close-dialog");
-const bookForm = document.getElementById("book-form");
-
-let myLibrary = [];
-
 newBookBtn.addEventListener("click", () => {
     dialog.showModal();
 });
 
+const closeDialogBtn = document.getElementById("btn-close-dialog");
 closeDialogBtn.addEventListener("click", () => {
     dialog.close();
 });
 
+const bookForm = document.getElementById("book-form");
 bookForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -28,7 +26,7 @@ bookForm.addEventListener("submit", (e) => {
     dialog.close();
 });
 
-
+let myLibrary = [];
 
 function Book(title, author, pages, read) {
     this.id = crypto.randomUUID();
@@ -38,10 +36,13 @@ function Book(title, author, pages, read) {
     this.read = read;
 }
 
-
 Book.prototype.info = function () {
     return `${this.id}, ${this.title} by ${this.author}, ${this.pages} pages, ${this.read ? "Read" : "Not read yet"}`;
 }
+
+Book.prototype.toggleRead = function () {
+    this.read = !this.read;
+};
 
 function addBookToLibrary(title, author, pages, read) {
     const newBook = new Book(title, author, pages, read);
@@ -74,17 +75,23 @@ function displayBooks() {
         readStatus.textContent = book.read ? "Read" : "Not read yet";
 
         const removeBtn = document.createElement("button");
-        removeBookFromLibrary.Btn.classList.add("add-remove");
+        removeBtn.textContent = "Remove";
+        removeBtn.classList.add("btn-remove");
         removeBtn.addEventListener("click", () => {
             removeBookFromLibrary(book.id);
+
         });
 
-        bookCard.append(title, author, pages, readStatus, removeBtn);
-        libraryContainer.appendChild(bookCard);
-    });
+        const toggleReadBtn = document.createElement("button");
+        toggleReadBtn.textContent = book.read ? "Mark Unread" : "Mark Read";
+        toggleReadBtn.classList.add("btn-toggle-read");
+        toggleReadBtn.addEventListener("click", () => {
+            book.toggleRead();
+            displayBooks();
+        });
 
-    removeBtn.addEventListener("click", () => {
-        removeBookFromLibrary(book.id);
+        bookCard.append(title, author, pages, readStatus, removeBtn, toggleReadBtn);
+        libraryContainer.appendChild(bookCard);
     });
 }
 
