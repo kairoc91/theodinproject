@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Library</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <h1>My Library</h1>
+        <button type="button" id="btn-new-book" class="btn btn-primary">+ New Book</button>
+    </header>
+
+    <main class="main-container">
+        <!-- Container where book cards will be dynamically displayed -->
+        <div id="library-container" class="library-grid"></div>
+    </main>
+
+    <!-- Dialog / Modal for adding a new book -->
+    <dialog id="book-dialog" class="dialog">
+        <form id="book-form" method="dialog">
+            <h2>Add New Book</h2>
+
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+
+            <div class="form-group">
+                <label for="author">Author</label>
+                <input type="text" id="author" name="author" required>
+            </div>
+
+            <div class="form-group">
+                <label for="pages">Number of Pages</label>
+                <input type="number" id="pages" name="pages" min="1" required>
+            </div>
+
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="read" name="read">
+                <label for="read">Have you read this book?</label>
+            </div>
+
+            <div class="form-actions">
+                <button type="button" id="btn-close-dialog" class="btn btn-secondary">Cancel</button>
+                <button type="submit" id="btn-submit" class="btn btn-primary">Add Book</button>
+            </div>
+        </form>
+    </dialog>
+</body>
+
+</html>
+
