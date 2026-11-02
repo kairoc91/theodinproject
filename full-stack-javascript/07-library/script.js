@@ -1,4 +1,4 @@
-const dialog = documento.getElementById("book-dialog");
+const dialog = document.getElementById("book-dialog");
 const newBookBtn = document.getElementById("btn-new-book");
 const closeDialogBtn = document.getElementById("btn-close-dialog");
 const bookForm = document.getElementById("book-form");
@@ -23,10 +23,12 @@ bookForm.addEventListener("submit", (e) => {
 
     addBookToLibrary(title, author, pages, read);
 
-    bookForm.requestFullscreen();
+    bookForm.reset();
 
     dialog.close();
 });
+
+
 
 function Book(title, author, pages, read) {
     this.id = crypto.randomUUID();
@@ -42,7 +44,7 @@ Book.prototype.info = function () {
 }
 
 function addBookToLibrary(title, author, pages, read) {
-    const newBook = newBook(title, author, pages, read);
+    const newBook = new Book(title, author, pages, read);
 
     myLibrary.push(newBook);
 
@@ -57,6 +59,7 @@ function displayBooks() {
     myLibrary.forEach((book) => {
         const bookCard = document.createElement("div");
         bookCard.classList.add("book-card");
+        bookCard.dataset.id = book.id;
 
         const title = document.createElement("h3");
         title.textContent = book.title;
@@ -70,8 +73,23 @@ function displayBooks() {
         const readStatus = document.createElement("p");
         readStatus.textContent = book.read ? "Read" : "Not read yet";
 
-        bookCard.append(title, author, pages, readStatus);
+        const removeBtn = document.createElement("button");
+        removeBookFromLibrary.Btn.classList.add("add-remove");
+        removeBtn.addEventListener("click", () => {
+            removeBookFromLibrary(book.id);
+        });
 
+        bookCard.append(title, author, pages, readStatus, removeBtn);
         libraryContainer.appendChild(bookCard);
     });
+
+    removeBtn.addEventListener("click", () => {
+        removeBookFromLibrary(book.id);
+    });
+}
+
+function removeBookFromLibrary(id) {
+    myLibrary = myLibrary.filter((book) => book.id !== id);
+
+    displayBooks();
 }
